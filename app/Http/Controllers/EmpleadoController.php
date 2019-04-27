@@ -64,7 +64,6 @@ class EmpleadoController extends Controller
                                        ,'calificacion' => $skill['calificacion']
             ]);
         }
-        return true;
     }
 
     /**
