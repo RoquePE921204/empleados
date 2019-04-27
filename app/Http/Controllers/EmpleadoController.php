@@ -56,7 +56,7 @@ class EmpleadoController extends Controller
                                      ,'email' => $inputs['email']
                                      ,'puesto' => $inputs['puesto']
                                      ,'domicilio' => $inputs['domicilio']
-                                     ,'fecha_nacimiento' => Carbon::parse($inputs['fecha_nacimiento'])
+                                     ,'fecha_nacimiento' => Carbon::createFromFormat('d/m/Y',$inputs['fecha_nacimiento'])
         ]);
 
         foreach ($inputs['skills'] as $key => $skill) {
