@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Empleado;
+use Carbon\Carbon;
 
 use App\Http\Requests\CreateEmpleadoRequest;
 
@@ -55,7 +56,7 @@ class EmpleadoController extends Controller
                                      ,'email' => $inputs['email']
                                      ,'puesto' => $inputs['puesto']
                                      ,'domicilio' => $inputs['domicilio']
-                                     ,'fecha_nacimiento' => $inputs['fecha_nacimiento']
+                                     ,'fecha_nacimiento' => Carbon::parse($inputs['fecha_nacimiento'])
         ]);
 
         foreach ($inputs['skills'] as $key => $skill) {
