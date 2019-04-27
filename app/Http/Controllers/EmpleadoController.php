@@ -17,7 +17,7 @@ class EmpleadoController extends Controller
      */
     public function index()
     {
-        $all = Empleado::where('id', $id)->get();
+        $all = Empleado::get();
         $todos = array();
         foreach ($all as $key => $emp) {
             $e = $emp->getAttributes();
