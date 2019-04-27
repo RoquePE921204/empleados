@@ -60,7 +60,7 @@ class EmpleadoController extends Controller
         ]);
 
         foreach ($inputs['skills'] as $key => $skill) {
-            $empleado->skill()->create(['nombre' => $skill['nombre']
+            $empleado->skills()->create(['nombre' => $skill['nombre']
                                        ,'calificacion' => $skill['calificacion']
             ]);
         }
